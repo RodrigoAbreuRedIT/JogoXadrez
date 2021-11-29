@@ -15,6 +15,9 @@
         public void incrementarQteMovimentos() {
             this.qteMovimentos++;
         }
+        public void decrementarQteMovimentos() {
+            this.qteMovimentos--;
+        }
 
         public bool podeMover(Posicao pos) {
             Peca p = tab.peca(pos);

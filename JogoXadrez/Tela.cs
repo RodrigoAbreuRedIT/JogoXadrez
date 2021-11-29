@@ -11,6 +11,8 @@ namespace JogoXadrez {
             imprimirPecasApturadas(partida);
             Console.WriteLine($"Turno: {partida.turno}");
             Console.WriteLine($"Aguardando Jogada: {partida.jogadorAtual}");
+            if(partida.xeque)
+                Console.WriteLine("XEQUE!!");
         }
 
         public static void imprimirPecasApturadas(PartidaDeXadrez partida) {
