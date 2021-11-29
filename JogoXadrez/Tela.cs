@@ -10,9 +10,17 @@ namespace JogoXadrez {
             Tela.imprimirTabuleiro(partida.tab);
             imprimirPecasApturadas(partida);
             Console.WriteLine($"Turno: {partida.turno}");
-            Console.WriteLine($"Aguardando Jogada: {partida.jogadorAtual}");
-            if(partida.xeque)
-                Console.WriteLine("XEQUE!!");
+
+            if (!partida.terminada) {
+                Console.WriteLine($"Aguardando Jogada: {partida.jogadorAtual}");
+                if (partida.xeque)
+                    Console.WriteLine("XEQUE!!");
+            }
+            else {
+                Console.WriteLine("XEQUEMATE!");
+                Console.WriteLine($"Vencedor: {partida.jogadorAtual}");
+                Console.ReadLine();
+            }
         }
 
         public static void imprimirPecasApturadas(PartidaDeXadrez partida) {
